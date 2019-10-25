@@ -1,0 +1,27 @@
+.pageOverlay {
+    background: rgba(57, 75, 79, 0.55);
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 11;
+    visibility: hidden;
+    transition: all 200ms ease-in-out;
+
+    @media (min-width: $lg) {
+        z-index: 60;
+        background: transparent;
+    }
+}
+
+.pageOverlay {
+    bottom: -5px;
+}
+
+.pageOverlay.visible {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}

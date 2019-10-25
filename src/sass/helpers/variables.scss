@@ -1,0 +1,137 @@
+// Responsive variant
+
+$xs: 420px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xle: 1280px;
+$xle-more: 1400px;
+$xle-hd: 1480px;
+
+
+// Global Colors
+
+$color-1:	#000000;
+$color-2:	#808080;
+$color-3:	#ffffff;
+$color-4:	#FBB03B;
+$color-5:	#FF0000;
+$color-6:	#D8D8D8;
+
+
+// Global variable colors 
+
+$primary-color:   	  $color-1;
+$secondary-color: 	  $color-2;
+$native-color-hover:  $color-4;
+$native-color-error:  $color-5;
+
+
+// Global radius 
+
+$native-radius: 4px;
+
+
+// Global setting fonts
+
+$font-base-color:$color-1;
+$font-base: 'Poppins', sans-serif;
+
+$font-base-size: 1.3rem;
+$font-base-line: normal;
+
+$font-base-weight:400;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+
+// Global setting fonts _ _ dekstop view
+
+$font-base-line-xl:2.4rem;
+
+
+// Buttons styles
+
+// -- Btn main styles
+
+$bg-color: #ffffff;
+$font-color:#000000;
+$border-style:1px solid #D8D8D8;
+$border-radius:50px;
+$btn-height:49px;
+$btn-padding:0 30px;
+$btn-font-size:1.3rem;
+$btn-font-weight:600;
+
+// -- hover
+
+$bg-color-hover:#FBB03B;
+$font-color-hover:#000000;
+$border-style-hover:#FBB03B;
+
+/**/
+
+
+// -- Btn main higlighted styles
+
+$bg-highlighted-color:#FBB03B;
+$border-style-higlighted:1px solid #FBB03B;
+
+// -- hover
+
+$bg-highlighted-color-hover:#fdc23c;
+$border-style-higlighted-hover:1px solid #fdc23c;
+
+/**/
+
+// -- Btn main outline styles
+
+$bg-highlighted-color-outline:#ffffff;
+$border-style-higlighted-outline:1px solid #FBB03B;
+
+// -- hover
+
+$bg-highlighted-color-outline-hover:#FBB03B;
+$border-style-higlighted-outline-hover:1px solid #FBB03B;
+
+/**/
+
+
+// Input styles
+
+$input-height:56px;
+$input-border: 1px solid #D8D8D8;
+$input-radius:40px;
+$input-padding:2px 40px 0;
+$input-font-size:1.3rem;
+$input-font-weight:400;
+$input-font-color: #808080;
+$native-input-placeholder-color:#808080;
+
+
+// Input label styles
+
+$label-font-size:1.3rem;
+$label-font-weight:400;
+$label-font-color: #808080;
+
+// Input custom slide placeholder
+
+$native-input-placeholder-color-slide:transparent;
+
+
+// Checkbox styles
+
+$checkbox-height:20px;
+$checkbox-width:20px;
+$checkbox-color: $primary-color;
+$checkbox-font-size:1.3rem;
+$checkbox-font-line:2rem;
+$checkbox-font-weight:400;
+$checkbox-text-offset:4px 0 0 34px;
+$checkbox-width-text: 345px;
+$checkbox-border: 1px solid #D8D8D8;
+$checkbox-border-radius:0;

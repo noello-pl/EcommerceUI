@@ -1,0 +1,171 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+
+        li {
+            display: inline-flex;
+            margin: 0 14px;
+            align-items: center;
+            position: relative;
+
+            @media (max-width: $lg) {
+                margin: 0 12px;
+            }
+
+            //
+
+            display: inline-block;
+            color: $primary-color;
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+            font-weight: $font-weight-bold;
+
+            
+            a {
+                display: inline-block;
+                color: $primary-color;
+               font-size: 1.4rem;
+            line-height: 1.5rem;
+                font-weight: $font-weight-bold;
+
+               
+            }
+
+            &:hover,
+            &:focus {
+                color: $native-color-hover;
+
+                a, span {
+                    color: $native-color-hover;
+                }
+            }
+        }
+
+        .text-dots {
+            position: relative;
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+
+        .text-prev,
+        .text-next {
+            @media (max-width: $lg) {
+                width: 37px;
+                height: 37px;
+                overflow: hidden;
+            }
+
+            a {
+                color: $primary-color;
+                font-size: 1.4rem;
+                font-weight: $font-weight-bold;
+                line-height: 1.5rem;
+                text-transform: uppercase;
+
+                @media (max-width: $lg) {
+                    color: #fff;
+                }
+
+                .icon {
+                    text-transform: initial;
+                    display:none;
+                    position: relative;
+                    top: 1px;
+
+                    @media (max-width: $lg) {
+                         display: inline-block;
+                        color: $native-color-hover;
+                        top: 12px;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    color: $native-color-hover;
+
+                    @media (max-width: $lg) {
+                        color: #fff;
+                    }
+
+                    .icon {
+                        color: $native-color-hover;
+                    }
+                }
+            }
+        }
+
+        .current {
+            color: #fff;
+
+            a, span {
+                color: #fff;
+            }
+        }
+
+        .current:after {
+            content: "";
+            width: 31px;
+            height: 31px;
+            z-index: -1;
+            left: -1.1rem;
+            top: -9px;
+            border-radius: 3px;
+            background: $native-color-hover;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            border-radius: 50%;
+
+            @media (max-width: $lg) {
+                 top: -9px;
+             //   top: -0.25rem;
+            }
+        }
+
+        li.text-prev {
+            margin-right: 25px;
+            margin-left: 0;
+
+            @media (max-width: $lg) {
+                margin-right: 0px;
+            }
+
+            a {
+                .icon {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        li.text-next {
+            margin-left: 25px;
+            margin-right: 0;
+
+            @media (max-width: $lg) {
+                margin-left: 0px;
+            }
+
+            a {
+                .icon {
+                    margin-left: 5px;
+
+                    @media (max-width: $lg) {
+                        top: -5px;
+                        left: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

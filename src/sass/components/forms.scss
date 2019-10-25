@@ -1,0 +1,404 @@
+input,
+.form-control {
+    height: $input-height;
+    border-radius: $input-radius;
+    border: $input-border;
+    padding: $input-padding;
+    font-size: $input-font-size;
+    box-shadow: none;
+    color: $input-font-color;
+    font-weight: $input-font-weight;
+    line-height: 2.5rem;
+    width: 100%;
+    box-sizing: border-box;
+     transition: 150ms border ease-in-out;
+}
+
+textarea,
+textarea.form-control {
+    height: 130px;
+    resize: none;
+    padding: 12px;
+    border-radius: 10px;
+
+    @media (min-width: $lg) {
+        height: 184px;
+    }
+}
+
+label {
+    display: flex;
+    font-size: $label-font-size;
+    font-weight: $label-font-weight;
+    color: $label-font-color;
+}
+
+
+
+
+// **** Custom input and label slide ****
+
+
+.form-group.form-group--slide {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+
+     .text-error,
+    .error-msg,
+    .error {
+        left:40px;
+        position: absolute;
+        top:10px;
+    }
+}
+
+.label-slide {
+    position: absolute;
+    left: 40px;
+    opacity:1;
+   
+    pointer-events: none;
+    transition: 150ms top ease-in-out, 150ms font ease-in-out;
+}
+
+.write-input {
+    .label-slide {
+        top: 10px;
+        font-size: 1rem;
+        left: 42px;
+
+        //text-transform: uppercase;
+   
+    }
+
+    .form-control--slide {
+        padding-top: 15px;
+    }
+
+
+}
+.field-error{
+    .label-slide{
+        margin-top: 8px;
+    }
+    .form-control--slide{
+        border:1px solid $native-color-error !important;
+    }
+}
+.field-error.write-input{
+    .label-slide{
+        top:auto;
+        left:40px;
+        font-size: $label-font-size;
+        opacity:0;
+    }
+}
+
+.form-control.form-control--slide::-webkit-input-placeholder {
+    color: $native-input-placeholder-color-slide;
+}
+
+/* WebKit, Blink, Edge */
+.form-control.form-control--slide:-moz-placeholder {
+    color: $native-input-placeholder-color-slide;
+}
+
+/* Mozilla Firefox 4 to 18 */
+.form-control.form-control--slide::-moz-placeholder {
+    color: $native-input-placeholder-color-slide;
+}
+
+/* Mozilla Firefox 19+ */
+.form-control.form-control--slide:-ms-input-placeholder {
+    color: $native-input-placeholder-color-slide;
+}
+
+/* Internet Explorer 10-11 */
+.form-control.form-control--slide::-ms-input-placeholder {
+    color: $native-input-placeholder-color-slide;
+}
+
+.text-error,
+.error-msg,
+.error {
+    font-size: 1rem;
+    color: $native-color-error;
+}
+
+
+/*********/ 
+
+.form-group{
+    position: relative;
+}
+/* Input Radio */
+
+input[type="radio"]{
+  
+  width: 20px;
+  height: 20px;
+  border-radius:50%;
+}
+
+
+.form-group--radio{
+    padding-left: 32px;
+
+    .form-control{
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+    label{
+        position: relative;
+    }
+    label:before{
+        content:"";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: $native-color-hover;
+        position: absolute;
+        left:-29px;
+        top:3px;
+        z-index: 1;
+        opacity:0;
+        transition: 150ms opacity ease-in-out
+
+    }
+     label.check-radio:before{
+        opacity:1;
+        
+    }
+}
+
+
+/* Chceckbox */
+
+.checkbox {
+    display: block;
+    position: relative;
+    margin: 15px 0;
+
+    &__input {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: $checkbox-width;
+        height:$checkbox-height;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    // Unchecked
+    &__label {
+        display: block;
+        padding:$checkbox-text-offset;
+        cursor: pointer;
+        font-size: $checkbox-font-size;
+        line-height: $checkbox-font-line;
+        max-width: $checkbox-width-text;
+        font-weight: $checkbox-font-weight;
+        color:$checkbox-color;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0px;
+            font-size: 1rem;
+            text-align: center;
+            line-height: 1.5rem;
+            width:$checkbox-width;
+            height: $checkbox-height;
+            border:$checkbox-border;
+            border-radius: $checkbox-border-radius;
+            background-color: #fff;
+            z-index: 1;
+            transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+            transition-property: background-color, border-color;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 4px;
+            width: 6px;
+            height: 12px;
+            z-index: 2;
+            transition: border-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+
+    // Checked
+    &__input:checked + &__label {
+        &:before {
+            content: '';
+
+        }
+
+        &:after {
+             content: '\48';
+            font-family: 'ecommerce';
+            border: 0;
+
+            color: #000;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 4.2px;
+            top: 2px;
+
+            @media (min-width: $lg) {
+                top: 3px;
+            }
+        }
+    }
+}
+
+/* Placeholder */
+
+.form-control::-webkit-input-placeholder {
+    color: $native-input-placeholder-color;
+}
+
+/* WebKit, Blink, Edge */
+.form-control:-moz-placeholder {
+    color: $native-input-placeholder-color;
+}
+
+/* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder {
+    color: $native-input-placeholder-color;
+}
+
+/* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder {
+    color: $native-input-placeholder-color;
+}
+
+/* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder {
+    color: $native-input-placeholder-color;
+}
+
+/* Microsoft Edge */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input:focus,
+textarea:focus {
+    border: $input-border !important;
+    box-shadow: none !important;
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    margin-top: 0;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
+  
+    box-shadow: none;
+    background: #fff;
+    margin-bottom: 0px;
+
+
+  height: $input-height;
+    border-radius: $input-radius;
+    border: $input-border;
+   
+
+
+    label {
+        opacity: 1;
+    }
+
+    label.text-error {
+        left: 0 !important;
+    }
+
+    select {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: window;
+        text-indent: 0.01px;
+        text-overflow: "";
+        font-size: 1.4rem;
+        font-weight: 300;
+        background: none;
+        border: none;
+       font-size: $input-font-size;
+color: $input-font-color;
+    font-weight: $input-font-weight;
+        outline: none;
+        padding: $input-padding;
+        position: relative;
+
+        @media (min-width: $xl) {
+            font-size: 1.4rem;
+        }
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+}
+
+.select-wrapper:after {
+    background: none;
+    color: #bbb;
+    content: "\41";
+    font-family: "ecommerce" !important;
+    font-size: 1.3rem;
+    padding: 0;
+    position: absolute;
+    right: 40px;
+    top: 2.1rem;
+    z-index: 1;
+    pointer-events: none;
+    
+
+   
+}
+
+.select-wrapper.select-wrapper--label {
+    display: block;
+
+    select {
+        top: 16px;
+    }
+}
+
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
