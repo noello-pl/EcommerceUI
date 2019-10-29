@@ -1,0 +1,44 @@
+.breadcrumbs{
+	&__list{
+		display: none;
+
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		@media (min-width: $lg){
+			display: flex;
+		}
+		li{
+			font-size: 1.3rem;
+			font-weight: 400;
+			color:#000000;
+			//margin-right: 20px;
+			a{
+				color:#B2B2B2;
+				.icon{
+					color:#B2B2B2;
+				}
+				&:hover,
+				&:focus{
+					color:$native-color-hover;
+					.icon{
+						color:$native-color-hover;
+					}
+				}
+			}
+			span{
+				color:#000000;
+			}
+		}
+		li:after{
+			content:"/";
+			color:#E2E2E2;
+			font-size: 1.3rem;
+			font-weight: 400;
+			margin:0 10px;
+		}
+		li:last-of-type:after{
+			display: none;
+		}
+	}
+}

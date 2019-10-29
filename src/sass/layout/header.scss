@@ -1,0 +1,73 @@
+.header-main{
+	background: #fff;
+
+	.container.container--flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 92px;
+		transition:120ms height ease-in-out;
+	}
+	&__logo{
+		width: 110px;
+		img{
+			max-height: 100%;
+		}
+	}
+	
+	&__group{
+		display: inline-flex;
+		align-items: center;
+		&__search-btn{
+			background: none;
+			padding: 0;
+			.icon{
+				font-size: 1.7rem;
+				line-height: 0;
+			}
+			span:last-of-type{
+				display: none;
+			}
+			&:hover,
+			&:focus{
+				.icon{
+					color:$native-color-hover;
+				}
+			}
+		}
+		&__search{
+			display: none;
+		}
+		&__nav-btn{
+			background: none;
+			padding: 0;
+			display: inline-flex;
+			margin-left: 16px;
+			margin-right: -5px;
+			.icon{
+				font-size: 3.2rem;
+				line-height: 0;
+			}
+			&:hover,
+			&:focus{
+				.icon{
+					color:$native-color-hover;
+				}
+			}
+		}
+		&__basket{
+			display: inline-flex;
+			margin-left: 16px;
+			.icon{
+				font-size: 1.7rem;
+				line-height: 0;
+			}
+			&:hover,
+			&:focus{
+				.icon{
+					color:$native-color-hover;
+				}
+			}
+		}
+	}
+}

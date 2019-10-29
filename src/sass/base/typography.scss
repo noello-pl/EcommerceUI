@@ -1,20 +1,21 @@
-.native-heding{
-	display: block;
-	font-weight: 700;
-	font-size: 2.2rem;
-	line-height: 2.8rem;
-	color:#3B3B3B;
+.native-heading-1{
+	display: flex;
+	font-weight: 300;
+	font-size: 2.1rem;
+	line-height: 3.1rem;
+	color:$primary-color;
+		@media (min-width: $md){
+		font-size: 2.5rem;
+		line-height: 3.8rem;
+	}
 	@media (min-width: $lg){
 		font-size: 3rem;
-		line-height: 3.5rem;
+		line-height: 4.6rem;
 	}
-	@media (min-width: $xl){
-		font-size: 4rem;
-		line-height: 4.4rem;
-	}
+
 }
 
-.native-heding-small{
+.native-heading-small{
 	display: block;
 	font-weight: 700;
 	font-size: 2.2rem;

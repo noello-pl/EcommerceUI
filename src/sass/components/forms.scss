@@ -238,6 +238,8 @@ input[type="radio"]{
     &__input:checked + &__label {
         &:before {
             content: '';
+            background: #000;
+            border:1px solid #000;
 
         }
 
@@ -246,10 +248,11 @@ input[type="radio"]{
             font-family: 'ecommerce';
             border: 0;
 
-            color: #000;
-            font-size: 1.2rem;
+            color: #fff;
+
+            font-size: 1.1rem;
             position: absolute;
-            left: 4.2px;
+            left: 4.4px;
             top: 2px;
 
             @media (min-width: $lg) {
@@ -401,4 +404,197 @@ select:focus {
 select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000;
+}
+
+
+// Select size
+
+.select-wrapper.select-wrapper--item{
+    height: 49px;
+    width: 184px;
+    select{
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        color:#AAAAAA;
+        padding: 1px 32px 0 25px;
+    }
+}
+.select-wrapper.select-wrapper--item::after{
+        right: 17px;
+    top: 19px;
+    font-size: 1rem;
+
+}
+
+.select-wrapper.small-size{
+    width: auto;
+    display: inline-flex;
+    height: 44px;
+    select{
+        width: auto;
+        min-width: auto;
+        text-transform: uppercase;
+        color:#000000;
+        padding: 2px 37px 0 27px;
+    }
+}
+.select-wrapper.small-size:after{
+        right: 16px;
+    top: 18px;
+    color:#000;
+    font-size: 0.8rem;
+}
+.select-wrapper.small-size:after:hover{
+    color:$primary-color;
+}
+.select-field{
+    display: flex;
+    align-items: center;
+    label{
+        margin-bottom: 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color:$primary-color;
+        margin-right: 15px;
+    }
+}
+.quantity-item{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 49px;
+    border:1px solid #D8D8D8;
+    border-radius:50px;
+    &__btn{
+        background: transparent;
+        font-size: 1.5rem;
+        color:$primary-color;
+        font-weight: 500;
+        padding: 0 5px;
+        flex:0 0 35px;
+        display: inline-flex;
+        justify-content: flex-end;
+        cursor:pointer;
+
+        &:hover,
+        &:focus{
+            color:$native-color-hover;
+        }
+    }
+    &__btn.quantity--plus{
+        justify-content: flex-start;
+    }
+    .form-control{
+        border:0;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 0 5px;
+        height: 46px;
+        color:$primary-color;
+    }
+}
+
+.label-sale{
+    display: inline-flex;
+    height: 30px;
+    background:$native-color-error;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align:center;
+    align-items: center;
+    border-radius: 40px;
+    padding: 0 14px;
+}
+
+.item-color{
+    display: inline-flex;
+    width: 43px;
+    height: 43px;
+    background: #000;
+    position: relative;
+    border:10px solid #fff;
+    margin-left: 8px;
+    cursor:pointer;
+
+}
+.item-color:hover:after,
+.item-color:focus:after{
+    border:1px solid #000;
+}
+.item-color.hovered:after{
+    border:1px solid #000;
+}
+.item-color:after{
+    content:"";
+    border:1px solid #E6E6E6;
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    transition:120ms border ease-in-out;
+}
+.item-color:first-of-type{
+    margin-left: 0;
+}
+
+.item-option{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #D4D4D4;
+    width: 43px;
+    height: 43px;
+    cursor:pointer;
+    background: #fff;
+    transition:120ms background ease-in-out, 120ms color ease-in-out;
+   
+    &__name{
+ font-size: 1.3rem;
+    font-weight: 400;
+    color:#000;
+    transition:120ms color ease-in-out;
+    }
+    &__field{
+        opacity:0;
+        visibility: hidden;
+        position: absolute;
+    }
+    &:hover,
+    &:focus{
+        background: #000;
+       .item-option__name{
+         color:#fff;
+       }
+    }
+}
+
+.item-option.hovered{
+    background: #000;
+       .item-option__name{
+         color:#fff;
+       }
+}
+
+.checkbox.checkbox-option{
+    .checkbox__label{
+        font-size: 1.4rem;
+        padding: 6px 0 0 40px;
+        span{
+            color:#C4C4C4;
+        }
+    }
+    .checkbox__label:before{
+        width: 26px;
+        height: 26px;
+    }
+     .checkbox__input:checked + .checkbox__label {
+        &:after{
+            top:7px;
+            left:8px;
+        }
+     }
 }

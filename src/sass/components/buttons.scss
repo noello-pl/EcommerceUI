@@ -8,7 +8,7 @@ button {
     margin: 0;
     color: $primary-color;
     display: inline-flex;
-    height: $btn-height;
+    height: auto;
 }
 
 .btn-main{
@@ -54,5 +54,33 @@ button {
     &:focus{
         background: $bg-highlighted-color-outline-hover;
         border:$border-style-higlighted-outline-hover;
+    }
+}
+
+.link-arrow{
+    display: inline-flex;
+    align-items: center;
+    .icon{
+        display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $native-color-hover;
+    width: 39px;
+    height: 39px;
+    color:#fff;
+    border-radius: 50%;
+    margin-right: 15px;
+    }
+    font-size: 1.3rem;
+    font-weight: 600;
+    color:#fff;
+    letter-spacing: 1.04px;
+    text-transform: uppercase;
+    &:hover,
+    &:focus{
+        .icon{
+            background:$bg-highlighted-color-hover ;
+        }
+        color:$bg-highlighted-color-hover ;
     }
 }

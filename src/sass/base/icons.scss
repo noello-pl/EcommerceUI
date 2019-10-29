@@ -6,14 +6,14 @@
   src:url("../fonts/ecommerce.eot?#iefix") format("embedded-opentype"),
     url("../fonts/ecommerce.woff") format("woff"),
     url("../fonts/ecommerce.ttf") format("truetype"),
-    url("../fonts/ecommerce.svg#jasnypunkt") format("svg");
+    url("../fonts/ecommerce.svg#ecommerce") format("svg");
   font-weight: normal;
   font-style: normal;
 
 }
 
 [data-icon]:before {
-  font-family: "jasnypunkt" !important;
+  font-family: "ecommerce" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -27,7 +27,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "jasnypunkt" !important;
+  font-family: "ecommerce" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;

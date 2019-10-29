@@ -1,0 +1,231 @@
+.range-slider {
+    padding: 0;
+    overflow: hidden;
+
+    
+}
+
+.range-slider-inner {
+    height: 3em;
+    position: relative;
+
+    input[type=range] {
+        -webkit-appearance: none;
+        background: none;
+        border:0;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 5px;
+        border: none;
+        border-radius: 3px;
+        background: transparent;
+    }
+
+    input[type=range]::-ms-track {
+        height: 5px;
+        background: transparent;
+        border: none;
+        border-radius: 3px;
+    }
+
+    input[type=range]::-moz-range-track {
+        height: 5px;
+        background: transparent;
+        border: none;
+        border-radius: 3px;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #000;
+        margin-top: 55px;
+        position: relative;
+        z-index: 10000;
+    }
+
+    input[type=range]::-ms-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #000;
+        margin-top: -5px;
+        position: relative;
+        z-index: 10000;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        z-index: 2;
+        position: relative;
+        border: 4px solid #000;
+        height: 16px;
+        width: 16px;
+        border-radius: 25px;
+        background: #ebebeb;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        -webkit-appearance: none;
+        z-index: 2;
+        position: relative;
+        border: 5px solid #000;
+        height: 9px;
+        width: 9px;
+        border-radius: 25px;
+        background: #fff;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -8px;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+        border:0 !important;
+    }
+}
+
+.range-slider-inner input {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 13px;
+    outline: none;
+    height: 22px;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.range-slider-inner input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+}
+
+.range-slider-inner input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+}
+
+.range-slider-inner input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+}
+
+.range-slider-inner input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+}
+
+.range-slider-inner input[type=range]::-moz-focus-outer {
+    border: 0;
+}
+
+.rangeValue {
+    width: 30px;
+}
+
+.output {
+    position: absolute;
+    border: 1px solid #999;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: #999;
+    border-radius: 4px;
+    display: inline-block;
+    font: bold 15px/30px Helvetica, Arial;
+    bottom: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.output.outputTwo {
+    left: 100%;
+}
+
+.full-range,
+.incl-range {
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 22px;
+    position: absolute;
+    background: #000;
+    border:0;
+}
+
+.incl-range {
+    background: #000;
+}
+
+.field-content {
+    margin-top: 13px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+ .seperator-fc{
+          font-size: 1.6rem;
+          display: inline-block;
+          margin: 0 14px;
+        }
+
+
+    .field-range {
+        width: 50%;
+        float: left;
+        position: relative;
+     
+        min-height: 41px;
+        display: inline-flex;
+        align-items: center;
+        flex:0 0 100px;
+
+        span {
+            font-size: 1.1rem;
+            display: inline-block;
+            color: #000;
+            position: absolute;
+
+            
+  
+            right: 11px;
+            margin-top: 1px;
+        }
+       
+        .form-control {
+            width: 100%;
+            border-radius: 0px;
+            text-align: right;
+            background: #F4F4F4;
+            font-size: 1.1rem;
+            color:#000000;
+            height: 24px;
+            font-weight: 400;
+                 padding-right: 22px;
+    padding-left: 10px;
+    border:0;
+        }
+         .form-control:focus{
+            padding: 0 30px 0 10px;
+         }
+    }
+}
