@@ -1,0 +1,97 @@
+.section-newsletter {
+    padding: 30px 0;
+
+
+    .container.lazy {
+    	padding: 25px 30px;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	position: relative;
+    	 @media (min-width: $sm) {
+            max-width: calc(540px - 60px);
+        }
+        @media (min-width: $md) {
+            max-width: calc(1140px - 25px);
+            height: 242px;
+            align-items: center;
+            display: flex;
+            width: calc(100% - 94px);
+        }
+        	@media (min-width: $lg){
+        		width: calc(960px - 35px);
+        		padding: 25px 50px;
+        	}
+        .row{
+        	  @media (min-width: $md) {
+        	  	align-items: center;
+        	  }
+        }
+    }
+    .container.lazy:before{
+    	content:"";
+    	opacity:0.2;
+    	background: #000;
+    	position: absolute;
+    	left:0;
+    	right: 0;
+    	top:0;
+    	bottom:0;
+    }
+    &__txt{
+    	span{
+    		color:#FFFFFF;
+    		display: block;
+    		text-align: center;
+    		font-size: 2rem;
+    		   @media (min-width: $md) {
+    		   	text-align: left;
+    		   }
+    		   @media (min-width: $xl){
+    		   	font-size: 2.9rem;
+    		   }
+    	}
+    }
+    &__form{
+    	margin-top: 25px;
+    	 @media (min-width: $md) {
+    	 	margin-top: 0;
+    	 }
+    	 	@media (min-width: $lg){
+    	 		display: flex;
+    justify-content: flex-end;
+    	 	}
+
+		.form-group{
+			margin-bottom: 0;
+
+		}
+    }
+    	&__fields{
+    		@media (min-width: $sm) {
+			 	display: flex;
+			 	justify-content: space-between;
+			 }
+    		.form-control{
+    			border:0;
+    			height: 48px;
+    		}
+    		.form-control:focus{
+    			border:0 !important;
+    		}
+    		.write-input{
+    			.label-slide{
+    				top:8px;
+    				left:41px;
+    			}
+    		}
+    		.btn-main{
+    			width: 100%;
+    			margin-top: 12px;
+    			@media (min-width: $sm) {
+			 	width: 119px;
+			 	margin-top: 0;
+			 	margin-left: 15px;
+			 }
+    		}
+    	}
+}

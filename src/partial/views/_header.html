@@ -1,5 +1,8 @@
 <div class="container container--flex">
-	<a href="index.html" class="header-main__logo" title="Przejdź do strony Głównej"><img src="img/logo.svg" class="lazy img-fluid" alt="E-shop"></a>
+	<a href="index.html" class="header-main__logo" title="Przejdź do strony Głównej">
+		<img src="img/logo.svg" class="lazy img-fluid d-lg-none" alt="E-shop">
+		<img src="img/logo_white.svg" class="lazy img-fluid d-none d-lg-inline-flex" alt="E-shop">
+	</a>
 	<nav class="header-main__nav">
 		<button type="button" class="close-nav"><span class="icon icon-cancel"></span></button>
 		<ul class="header-main__nav__list">
@@ -137,11 +140,12 @@
 		</ul>
 	</nav>
 	<div class="header-main__group">
+
 		<button type="button" class="header-main__group__search-btn">
 			<span class="icon icon-noun-search-1"></span>
-			<span class="icon icon-cancel"></span>
 		</button>
 		<div class="header-main__group__search">
+			<button type="button" class="close-search"><span class="icon icon-cancel"></span>Zamknij</button>
 			<form action="#" id="searchForm">
 				<div class="search-form">
 					<input type="text" class="form-control" placeholder="Wyszukaj ...">
@@ -150,6 +154,7 @@
 			</form>
 		</div>
 		<a href="koszyk.html" class="header-main__group__basket" title="Koszyk"><span class="icon icon-noun-cart-1"></span></a>
+		<a href="#" class="header-main__group__account" title="Twoje konto"><span class="icon icon-noun-avatar-1"></span></a>
 		<button type="button" class="header-main__group__nav-btn" title="Menu"><span class="icon icon-navicon"></span></button>
 	</div>
 </div>

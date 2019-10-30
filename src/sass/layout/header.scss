@@ -1,5 +1,9 @@
 .header-main{
 	background: #fff;
+	 @media (min-width: $lg) {
+	 	background: transparent;
+	 	position: absolute;
+	 }
 
 	.container.container--flex{
 		display: flex;
@@ -10,10 +14,17 @@
 	}
 	&__logo{
 		width: 110px;
+	//	z-index: 12;
+		transition:120ms all ease-in-out;
 		img{
 			max-height: 100%;
 		}
 	}
+/* 	&__logo.index-high{
+	opacity:1;
+	z-index: 12;
+
+} */
 	
 	&__group{
 		display: inline-flex;
@@ -21,13 +32,14 @@
 		&__search-btn{
 			background: none;
 			padding: 0;
+			 @media (min-width: $lg) {
+			 	color:#fff;
+			 }
 			.icon{
 				font-size: 1.7rem;
 				line-height: 0;
 			}
-			span:last-of-type{
-				display: none;
-			}
+			
 			&:hover,
 			&:focus{
 				.icon{
@@ -35,15 +47,119 @@
 				}
 			}
 		}
+		&__search:before{
+			content:"";
+			position: fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right: 0;
+			background: #000;
+			opacity:0.86;
+		}
 		&__search{
-			display: none;
+			display: flex;
+			opacity:0;
+			visibility: hidden;
+			position: fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right: 0;
+			//background: #000;
+			z-index: 11;
+			padding: 120px 30px 30px 30px;
+			transition: 120ms opacity ease-in-out;
+			.close-search{
+				height: auto;
+				background: none;
+				position: absolute;
+				right: 30px;
+				top:37px;
+				padding: 0;
+				display: inline-flex;
+				align-items: center;
+				color:#fff;
+				@media (min-width: $sm) {
+            	    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+            }
+             @media (min-width: $md) {
+              	max-width: 691px;
+              }
+				.icon{
+					margin-right: 10px;
+					font-size: 1.4rem;
+					line-height: 0;
+					position: relative;
+					top:-1px;
+					color:#fff;
+				}
+				&:hover{
+					color:$native-color-hover;
+					.icon{
+						color:$native-color-hover;
+					}
+				}
+			}
+			form{
+				width: 100%;
+			}
+			.search-form{
+				display: flex;
+				position: relative;
+				 @media (min-width: $sm) {
+				 	max-width: 450px;
+				 	margin:0 auto;
+				 }
+				      @media (min-width: $md) {
+              	max-width: 685px;
+              }
+				.form-control{
+					padding-right: 60px;
+					padding-left: 22px;
+					background: #fff;
+					border:0;
+				}
+				.form-control:focus{
+					border:0 !important;
+				}
+				&__btn{
+					background: none;
+					height: auto;
+					position: absolute;
+					right: 10px;
+    top: 15px;
+					.icon{
+						font-size: 2.1rem;
+					}
+					&:hover{
+						.icon{
+							color:$native-color-hover;
+						}
+					}
+				}
+			}
+		}
+		&__search.open-nav{
+			opacity:1;
+			visibility: visible;
 		}
 		&__nav-btn{
 			background: none;
 			padding: 0;
 			display: inline-flex;
-			margin-left: 16px;
+			margin-left: 20px;
 			margin-right: -5px;
+			@media (min-width: $lg) {
+			 	display: none;
+			 }
 			.icon{
 				font-size: 3.2rem;
 				line-height: 0;
@@ -55,9 +171,15 @@
 				}
 			}
 		}
-		&__basket{
-			display: inline-flex;
-			margin-left: 16px;
+	
+		&__basket,
+		&__account{
+				display: inline-flex;
+			margin-left: 20px;
+			@media (min-width: $lg) {
+			 	color:#fff;
+			 	
+			 }
 			.icon{
 				font-size: 1.7rem;
 				line-height: 0;
@@ -68,6 +190,13 @@
 					color:$native-color-hover;
 				}
 			}
+		}
+		&__account{
+			display: none;
+			@media (min-width: $lg) {
+			 display: inline-flex;
+			 	
+			 }
 		}
 	}
 }

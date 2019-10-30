@@ -1,0 +1,30 @@
+.swiper-pagination{
+	position: relative;
+	bottom:0;
+	margin-top: 15px;
+
+	.swiper-pagination-bullet{
+		background: #696969;
+	}
+	.swiper-pagination-bullet.swiper-pagination-bullet-active{
+background: #000;
+	}
+}
+
+.swiper-pagination.swiper-pagination--absolute{
+	position: absolute;
+margin-top: 0;
+.swiper-pagination-bullet{
+		background: #fff;
+	}
+	.swiper-pagination-bullet.swiper-pagination-bullet-active{
+		background: $native-color-hover;
+	}
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+	background-image:none;
+	height: auto;
+	background: none;
+}

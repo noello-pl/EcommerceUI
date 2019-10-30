@@ -1,0 +1,144 @@
+.footer-main{
+	overflow: hidden;
+	margin-top: 35px;
+	.row{
+		flex-direction: column-reverse;
+		  @media (min-width: $lg){
+		  	flex-direction: row;
+		  }
+	}
+	.row-lg{
+		@media (min-width: $lg){
+			display: flex;
+
+		}
+	}
+	&__about{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		 @media (min-width: $lg){
+		 	align-items: flex-start;
+		 }
+		&__logo{
+			margin:35px 0 20px;
+			@media (min-width: $lg){
+				margin-top: 0;
+			}
+			img{
+				max-height: 100%;
+			}
+		}
+		p{
+			color:#808080;
+			font-size: 1.1rem;
+			line-height: 1.8rem;
+			text-align: center;
+			max-width: 315px;
+			@media (min-width: $lg){
+				font-size: 1.3rem;
+			line-height: 2.6rem;
+			text-align: left;
+			}
+		}
+	}
+	&__nav{
+		@media (min-width: $lg){
+			width: 33.3333%;
+			flex:0 0 33.3333%;
+			max-width: 33%;
+		}
+		&__heading{
+			display: block;
+			position: relative;
+			font-size: 1.4rem;
+			font-weight: 600;
+			padding: 8px 0;
+			cursor:pointer;
+			@media (min-width: $lg){
+				pointer-events: none;
+			}
+
+		}
+		&__heading:after{
+			content:"\41";
+			font-family: 'ecommerce';
+			font-size: 0.7rem;
+			position: absolute;
+			right: 0;
+			top:12px;
+			display: inline-flex;
+			transition:120ms transform ease-in-out;
+			@media (min-width: $lg){
+				display: none;
+			}
+		}
+		&__heading.active:after{
+			transform: rotate(-180deg);
+			color:$native-color-hover;
+		}
+		&__heading.active{
+			//transform: rotate(-190deg);
+			color:$native-color-hover;
+		}
+		&__list{
+			list-style: none;
+			padding: 0;
+			margin:10px 0 0;
+			display: none;
+				@media (min-width: $lg){
+					display: flex;
+					flex-direction: column;
+					margin-top: 24px;
+				}
+			li{
+				margin-bottom: 5px;
+				a{
+					font-size: 1.3rem;
+					&:hover,
+					&:focus{
+						color:$native-color-hover;
+					}
+				}
+			}
+		}
+		
+	}
+	&__address{
+			display: none;
+			@media (min-width: $lg){
+				display: flex;
+				flex-direction: column;
+			}
+			span{
+				display: block;
+				margin-bottom: 5px;
+				font-size: 1.3rem;
+			}
+		}
+		.row.row--copyrights{
+			text-align: center;
+			position: relative;
+			padding: 15px 0;
+				@media (min-width: $lg){
+					margin-top: 30px;
+					height: 86px;
+					align-items: center;
+				}
+			p{
+				color:#AEAEAE;
+				font-size: 1.2rem;
+				margin:0;
+			}
+		}
+		.row.row--copyrights:before{
+			content:"";
+			position: absolute;
+			background: #EBEBEB;
+			left:-100%;
+			right: -100%;
+			top:0;
+			height: 1px;
+
+		}
+}

@@ -15,7 +15,8 @@ button {
     display: inline-flex;
     height: $btn-height;
     border-radius: $border-radius;
-    min-width: 143px;
+    min-width: auto;
+    
     padding: $btn-padding;
     text-transform: uppercase;
     transition:150ms all ease-in-out;
@@ -27,6 +28,14 @@ button {
     font-size: $btn-font-size;
     cursor:pointer;
     background:  $bg-color;
+    text-align: center;
+     @media (min-width: $sm){
+        min-width: 143px;
+     }
+    @media (min-width: $lg){
+        font-size:$btn-font-size-lg;
+         padding: $btn-padding-lg;
+    }
     &:hover,
     &:focus{
         background: #FBB03B;

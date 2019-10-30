@@ -1,0 +1,27 @@
+.socials-list{
+	list-style: none;
+	padding: 0;
+	margin:30px 0 20px;
+	display: flex;
+	justify-content: center;
+	li{
+		margin-right: 15px;
+			@media (min-width: $lg){
+				margin-right: 36px;
+			}
+		a{
+			.icon{
+				color:#c5c5c5;
+				font-size: 1.6rem;
+			}
+			&:hover{
+				.icon{
+					color:$native-color-hover;
+				}
+			}
+		}
+	}
+	li:last-of-type{
+		margin-right: 0;
+	}
+}

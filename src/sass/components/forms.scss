@@ -497,16 +497,25 @@ select:-moz-focusring {
 
 .label-sale{
     display: inline-flex;
-    height: 30px;
+    height: 24px;
     background:$native-color-error;
     color:#fff;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 600;
     text-align:center;
     align-items: center;
     border-radius: 40px;
-    padding: 0 14px;
+    padding: 0 10px;
+    @media (min-width: $md){
+        font-size: 1.2rem;
+         height: 30px;
+          padding: 0 14px;
+    }
+}
+
+.label-sale.label-new{
+    background: #000;
 }
 
 .item-color{

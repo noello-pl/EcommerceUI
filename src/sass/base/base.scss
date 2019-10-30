@@ -12,6 +12,10 @@ body {
     color: $primary-color;
     padding-top: 92px;
     transition:120ms padding ease-in-out;
+         @media (min-width: $lg) {
+            padding-top: 0;
+            transition:none;
+         }
 
 }
 

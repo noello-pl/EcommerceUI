@@ -15,7 +15,7 @@
         background: #fff;
         padding: 25px 15px 15px 15px;
 
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             padding: 90px 30px 30px;
         }
 
@@ -25,6 +25,19 @@
             position: absolute;
             top: 25px;
             right: 29px;
+            @media (min-width: $sm) {
+            	    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+            }
+             @media (min-width: $md) {
+              	max-width: 691px;
+              }
 
             .icon {
                 font-size: 2.2rem;
@@ -46,6 +59,13 @@
             height: 100%;
             max-height: 300px;
             overflow-y:auto;
+            @media (min-width: $sm) {
+            	max-width: 450px;
+            	margin:0 auto;
+            }
+              @media (min-width: $md) {
+              	max-width: 685px;
+              }
 
 
             > li {
@@ -146,6 +166,7 @@
 }
 
 .open-nav{
+
 	visibility: visible;
 	opacity:1;
 }
