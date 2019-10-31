@@ -2,4 +2,7 @@
 	@media (max-width: 767px){
 		padding: 0 30px;
 	}
+	@media (min-width: $xle){
+		max-width: 1306px;
+	}
 }

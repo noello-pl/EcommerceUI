@@ -3,22 +3,56 @@
 	 @media (min-width: $lg) {
 	 	background: transparent;
 	 	position: absolute;
+
 	 }
 
 	.container.container--flex{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 92px;
+		height: 91px;
 		transition:120ms height ease-in-out;
+		 @media (min-width: $lg) {
+		 		height: 126px;
+		 }
 	}
 	&__logo{
 		width: 110px;
 	//	z-index: 12;
 		transition:120ms all ease-in-out;
+		@media (min-width: $lg){
+			position: relative;
+			z-index: 101;
+		}
 		img{
 			max-height: 100%;
 		}
+		
+		img:first-of-type{
+			opacity:1;
+			visibility: visible;
+			@media (min-width: $lg) {
+				opacity:0;
+			visibility: hidden;
+			position: absolute;
+			width: 0;
+			height: 0;
+			}
+		}
+		img:last-of-type{
+			opacity:0;
+			visibility: hidden;
+			@media (max-width: 991px) {position: absolute;
+			width: 0;
+			height: 0;
+		}
+			@media (min-width: $lg) {
+				opacity:1;
+			visibility: visible;
+
+		}
+		
+	}
 	}
 /* 	&__logo.index-high{
 	opacity:1;
@@ -29,6 +63,10 @@
 	&__group{
 		display: inline-flex;
 		align-items: center;
+		@media (min-width: $lg){
+			position: relative;
+			z-index: 101;
+		}
 		&__search-btn{
 			background: none;
 			padding: 0;
@@ -70,6 +108,9 @@
 			z-index: 11;
 			padding: 120px 30px 30px 30px;
 			transition: 120ms opacity ease-in-out;
+			@media (min-width: $lg) {
+				padding-top: 220px;
+			}
 			.close-search{
 				height: auto;
 				background: none;
@@ -178,6 +219,7 @@
 			margin-left: 20px;
 			@media (min-width: $lg) {
 			 	color:#fff;
+			 	margin-left: 41px;
 			 	
 			 }
 			.icon{
@@ -199,4 +241,54 @@
 			 }
 		}
 	}
+}
+.header-main.header-main--subpage.open-nav {
+	border-bottom: 0;
+}
+.header-main.header-main--subpage {
+	border-bottom: 1px solid #E5E5E5;;
+    @media (min-width: $lg) {
+        .header-main__logo {
+            position: relative;
+            z-index: 102;
+
+            img:first-of-type {
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+                height: auto;
+                width: auto;
+            }
+
+            img:last-of-type {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                height: 0;
+                width: 0;
+            }
+        }
+
+        .header-main__nav__list {
+            li {
+                a {
+                    color: #000;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .header-main__group {
+            z-index: 100;
+            position: relative;
+
+            &__search-btn,
+            &__basket,
+            &__account {
+                .icon {
+                    color: #000;
+                }
+            }
+        }
+    }
 }

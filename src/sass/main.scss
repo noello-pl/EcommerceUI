@@ -29,6 +29,7 @@
 @import 'components/product-item.scss';
 @import 'components/icon-benefits.scss';
 @import 'components/newsletter.scss';
+@import 'components/banners.scss';
 /* LAYOUT */
 
 @import 'layout/header.scss';
@@ -45,6 +46,11 @@
 
 /*--*/
 
+/* -_Cart */
+
+@import 'pages/_cart/_generals.scss';
+
+/*--*/
 
 
 

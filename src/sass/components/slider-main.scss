@@ -13,10 +13,17 @@
         	height: 630px;
         	padding-bottom: 210px;
         }
+        @media (min-width: $xl){
+        	height: 800px;
+        	align-items: center;
+        }
 
         &-item {
         	position: relative;
         	z-index: 2;
+        	  @media (min-width: $xl){
+        	  	margin-top: 127px;
+        	  }
             .slide-item__heading {
                 color: #FFFFFF;
                 font-size: 4.3rem;
@@ -26,10 +33,17 @@
                 	font-size: 5.2rem;
                 	line-height: 5.6rem;
                 }
+                 @media (min-width: $xl){
+                 	font-size:6.6rem;
+                 	line-height: 7.7rem;
+                 }
             }
             .link-arrow{
             	margin-top: 35px;
             	display: inline-flex;
+            	   @media (min-width: $xl){
+            	   	margin-top: 66px;
+            	   }
             }
         }
     }
@@ -52,6 +66,9 @@
 		display: flex;
 		justify-content: flex-end;
 		z-index: 15;
+		@media (min-width: $xl){
+			bottom:59px;
+		}
 		&-btn{
 			position: relative;
 
@@ -93,6 +110,9 @@
 		height: 130px;
 
 	}
+	@media (min-width: $xl){
+			margin-top: -130px;
+		}
 	&__wrapp{
 		background: #fff;
 		z-index: 11;
@@ -103,6 +123,13 @@
 			border-top-right-radius: 70px;
 			padding-right: 30px;
 		}
+		@media (min-width: $xl){
+			height: 130px;
+		}
+		  @media (min-width: $xle){
+		  	width: 84%;
+		  	padding-left: 136px;
+		  }
 	}
 	&__wrapp:before{
 		content:"";

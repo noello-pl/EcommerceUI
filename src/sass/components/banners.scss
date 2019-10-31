@@ -1,0 +1,36 @@
+.section-banners{
+	padding: 70px 0 40px;
+
+	.banners-item{
+		height: 373px;
+		background-size: cover;
+		padding: 45px 45px 60px;
+		display: flex;
+		align-items: flex-end;
+		position: relative;
+		z-index: 2;
+		&__content{
+		
+			&__heading{
+				color:#fff;
+				font-size: 2.5rem;
+				line-height: 3.9rem;
+				margin-bottom: 20px;
+				font-weight: 400;
+					width: 162px;
+			}
+		}
+	}
+	.banners-item:before{
+		content:"";
+		position: absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right: 0;
+		background: #000000;
+		opacity:0.3;
+		z-index: -1;
+	}
+
+}

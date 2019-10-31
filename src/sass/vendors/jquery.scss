@@ -28,3 +28,32 @@ margin-top: 0;
 	height: auto;
 	background: none;
 }
+
+.swiper-nav{
+	 @media (min-width: $xl){
+	 	margin-top: 60px;
+	 }
+	.swiper-button-prev,
+	.swiper-button-next{
+
+		.icon{
+			font-size: 2rem;
+		}
+	}
+	.swiper-button-prev{
+		left:0;
+		display: flex;
+    justify-content: flex-end;
+    @media (min-width: $xl){
+    	left:-25px;
+    }
+	}
+	.swiper-button-next{
+		right:0;
+		display: flex;
+    justify-content: flex-start;
+     @media (min-width: $xl){
+    	right:-25px;
+    }
+	}
+}

@@ -12,13 +12,19 @@ body {
     color: $primary-color;
     padding-top: 92px;
     transition:120ms padding ease-in-out;
+    position: relative;
          @media (min-width: $lg) {
             padding-top: 0;
             transition:none;
+            overflow-x:hidden;
          }
 
 }
-
+.subpage-body{
+    @media (min-width: $lg) {
+        padding-top: 127px;
+    }
+}
 p {
     font-size: $font-base-size;
 }

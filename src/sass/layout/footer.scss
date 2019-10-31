@@ -1,6 +1,9 @@
 .footer-main{
 	overflow: hidden;
 	margin-top: 35px;
+	@media (min-width: $xle){
+		margin-top: 56px;
+	}
 	.row{
 		flex-direction: column-reverse;
 		  @media (min-width: $lg){

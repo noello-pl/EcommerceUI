@@ -21,6 +21,14 @@
         		width: calc(960px - 35px);
         		padding: 25px 50px;
         	}
+	@media (min-width: $xl){
+        	width: calc(1140px - 34px);
+        }
+        @media (min-width: $xle){
+        	width: calc(1280px - 15px);
+    max-width: 1280px;
+    padding: 25px 110px;
+        }
         .row{
         	  @media (min-width: $md) {
         	  	align-items: center;
@@ -74,6 +82,9 @@
     		.form-control{
     			border:0;
     			height: 48px;
+    			@media (min-width: $xl){
+    				width: 315px;
+    			}
     		}
     		.form-control:focus{
     			border:0 !important;

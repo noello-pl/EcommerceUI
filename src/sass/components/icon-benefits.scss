@@ -1,5 +1,13 @@
 .icon-grid{
 	padding: 15px 0 25px;
+	@media (min-width: $xl){
+		padding: 45px 0 89px;
+	}
+	.native-header{
+		  @media (min-width: $lg){
+		  	margin-bottom: 86px;
+		  }
+	}
 	.row{
 		.col-12:last-of-type{
 			.icon-grid__item{
@@ -36,6 +44,9 @@
 				padding-left: 0;
 				margin-top: 20px;
 			}
+			  @media (min-width: $lg){
+			  	margin-top: 45px;
+			  }
 	}
 	&__name{
 		display: block;
@@ -46,6 +57,7 @@
 	
 		@media (min-width: $lg){
 			font-size: 1.6rem;
+			margin-bottom: 19px;
 		}
 	}
 	p{
@@ -57,6 +69,7 @@
 		@media (min-width: $lg){
 			display: block;
 			font-size: 1.3rem;
+			max-width: 240px;
 
 		}
 	}
