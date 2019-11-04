@@ -1,4 +1,10 @@
 .breadcrumbs{
+	@media (min-width: $lg){
+		margin-bottom: 30px;
+	}
+	 @media (min-width: $xl){
+	 	margin-bottom: 75px;
+	 }
 	&__list{
 		display: none;
 

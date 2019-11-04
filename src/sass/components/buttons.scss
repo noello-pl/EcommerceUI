@@ -92,4 +92,28 @@ button {
         }
         color:$bg-highlighted-color-hover ;
     }
+
+}
+.text-link{
+    color:$primary-color;
+    font-weight: 600;
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    .icon{
+        font-size: 1.2rem;
+        line-height: 0;
+        display: inline-flex;
+        margin-right: 12px;
+        position: relative;
+        top:0px;
+    }
+     &:hover,
+  
+    &:focus{
+        .icon{
+            color:$bg-highlighted-color-hover ;
+        }
+        color:$bg-highlighted-color-hover ;
+    }
 }

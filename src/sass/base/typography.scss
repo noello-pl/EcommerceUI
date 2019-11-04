@@ -28,7 +28,18 @@
         line-height: 2.8rem;
     }
 }
+.native-heading-large{
+     display: block;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: $primary-color;
 
+    @media (min-width: $lg) {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+}
 .native-header {
     display: flex;
     justify-content: space-between;

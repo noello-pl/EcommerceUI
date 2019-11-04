@@ -30,6 +30,8 @@
 @import 'components/icon-benefits.scss';
 @import 'components/newsletter.scss';
 @import 'components/banners.scss';
+@import 'components/filters.scss';
+
 /* LAYOUT */
 
 @import 'layout/header.scss';
@@ -52,7 +54,23 @@
 
 /*--*/
 
+/* -_Cart */
 
+@import 'pages/_list/_generals.scss';
+
+/*--*/
+
+/* -_Cart */
+
+@import 'pages/_account/_generals.scss';
+
+/*--*/
+
+/* -_Cart */
+
+@import 'pages/_checkout/_generals.scss';
+
+/*--*/
 
 /* VENDORS */
 

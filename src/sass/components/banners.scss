@@ -34,3 +34,37 @@
 	}
 
 }
+
+.section-banners.section-banners-2{
+	.banners-item:before{
+		display: none;
+	}
+	.banners-item{
+		.btn-main{
+			border:0;
+		}
+	}
+	.banners-item--1{
+		background-color: #E5E5E5;
+		justify-content: flex-end;
+		.banners-item__content__heading{
+			width: 100%;
+			color:$primary-color;
+		}
+	}
+	.banners-item--2{
+		background-color: #ECECEC;
+		justify-content: flex-end;
+		.banners-item__content__heading{
+			width: 100%;
+			color:$primary-color;
+		}
+	}
+}
+
+.label-txt{
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color:#0008FF;
+}

@@ -172,6 +172,10 @@
                     height: 3px;
                     bottom: 0;
                     background: $native-color-hover;
+                    display: none;
+                    @media (min-width: $lg){
+                        display: block;
+                    }
                 }
             }
 
@@ -227,8 +231,8 @@
                     &__list {
                         list-style: none;
                         padding: 0;
-                        margin: 20px 0;
-
+                        margin: 10px 0 20px;
+ @media (min-width: $lg){margin:20px 0;}
                         li {
                             a {
                                 font-size: 1.2rem;
@@ -249,9 +253,10 @@
                     }
 
                     &__list.sub-content-nav__list--recently {
-                        @media (min-width: $lg) {}
+                        @media (min-width: $lg) {
 
                         margin-top: 41px;
+                    }
 
                         li {
                             @media (min-width: $lg) {

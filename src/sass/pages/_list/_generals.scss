@@ -1,0 +1,78 @@
+.product-grid {
+	margin-bottom: 45px;
+	 @media (min-width: $lg) {
+	 	margin-bottom: 70px;
+	 }
+    &__top {
+        display: flex;
+ justify-content: space-between;
+        margin-bottom: 30px;
+ @media (min-width: $lg) {
+ 
+ 	margin:0 -17px 30px;
+ }
+ @media (min-width: $xl) {
+ 
+        align-items: center;
+        margin-bottom: 40px;
+ }
+        &__heading {
+            font-weight: 300;
+            font-size: 2.1rem;
+            line-height: 3.1rem;
+            color: $primary-color;
+         
+
+            @media (min-width: $md) {
+                font-size: 2.4rem;
+                line-height: 3.5rem;
+                flex:0 0 48%;
+                max-width: 48%;
+            }
+
+            span {
+                color: #D8D8D8;
+            }
+        }
+      
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+ @media (min-width: $md) {
+                
+                flex:0 0 48%;
+                max-width: 48%;
+            }
+            .select-field {
+                margin-left: 30px;
+            }
+            .btn-filters{
+            	padding: 0;
+            	background: none;
+            	position: relative;
+            	top:1px;
+            	.icon{
+            		font-size: 2.4rem;
+            		line-height: 0;
+            	}
+            }
+        }
+    }
+    &__list{
+    	.row{
+    	@media (min-width: $lg){	margin:0 -32px;}
+    		.product-item{
+    			margin-bottom: 30px;
+    			@media (min-width: $xl){
+    				padding: 0 32px;
+    				margin-bottom: 40px;
+    			}
+    			@media (min-width: $xl){
+    				margin-bottom: 80px;
+    			}
+    		}
+    	}
+    }
+}

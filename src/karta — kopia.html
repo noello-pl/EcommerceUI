@@ -336,25 +336,6 @@
                                     <span class="product-item__content__price">89.99zł</span>
                                 </div>
                             </a>
-                            <a href="karta.html" class="swiper-slide product-item">
-                                <div class="product-item__img">
-                                    <img  src="img/AdobeStock_118120200.png" data-src="img/AdobeStock_173519034.png" class="img-fluid lazy" alt="">
-                                    <span class="label-sale label-new">NEW</span>
-                                </div>
-                                <div class="product-item__content">
-                                    <h3 class="product-item__content__name">T-Shirt Summer Vibes</h3>
-                                    <span class="product-item__content__price sale-item">89.99zł</span>
-                                </div>
-                            </a>
-                            <a href="karta.html" class="swiper-slide product-item">
-                                <div class="product-item__img">
-                                    <img  src="img/AdobeStock_118120200.png" data-src="img/AdobeStock_136908398.png" class="img-fluid lazy" alt="">
-                                </div>
-                                <div class="product-item__content">
-                                    <h3 class="product-item__content__name">T-Shirt Summer Vibes</h3>
-                                    <span class="product-item__content__price">89.99zł</span>
-                                </div>
-                            </a>
                         </div>
                         <div class="swiper-pagination d-xl-none"></div>
                     </div>
@@ -472,7 +453,7 @@
 
        <script>
           
-             $("#formLogin").validate({
+             $("#test").validate({
                  
  ignore: ':hidden:not(:checkbox)',
      
@@ -491,29 +472,21 @@
         errorClass: "text-error",
                  rules: {
                
-                 password: "required",
-                   checkbox: "required",
-                   firstname: "required",
-                   lastname: "required",
-               email: {
-                 required: true,
-                 email: true
-                 }
-               
-               },
-               messages: {
-               
-                 password: "Pole wymagane",
-               checkbox: "Pole wymagane",
-               firstname: "Pole wymagane",
-               lastname: "Pole wymagane",
-               email: {
+                 tests: "required",
+                    email: {
                    required: "Nie podałeś adresu e-mail",
                    email: "Błędny format"
               
         
       
         },
+               
+               },
+               messages: {
+               
+                 tests: "Pole wymagane",
+                
+            
                  },
        
              });

@@ -1,6 +1,7 @@
 .pagination {
     display: flex;
     justify-content: center;
+    margin-top: 35px;
 
     &__list {
         list-style: none;
@@ -105,10 +106,10 @@
         }
 
         .current {
-            color: #fff;
+            color:$primary-color;
 
             a, span {
-                color: #fff;
+                color:$primary-color;
             }
         }
 
@@ -119,13 +120,14 @@
             z-index: -1;
             left: -1.1rem;
             top: -9px;
-            border-radius: 3px;
-            background: $native-color-hover;
+          
+            background: #fff;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             position: absolute;
-            border-radius: 50%;
+           border:1px solid #E6E6E6;
+           
 
             @media (max-width: $lg) {
                  top: -9px;

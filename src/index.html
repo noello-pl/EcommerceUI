@@ -265,6 +265,31 @@
                     </div>
                 </div>
             </section>
+            <!-- <section class="section-banners section-banners-2 d-none d-lg-flex">
+                <div class="container">
+                    <div class="row m-0">
+                        <div class="col-lg-6 p-0">
+                            <div class="banners-item banners-item--1 lazy" data-bg="url(img/Mask_1.png)">
+                                <div class="banners-item__content">
+                                    <span class="label-txt">WOMEN</span>
+                                    <h3 class="banners-item__content__heading"><b>Shop the new</b><br>summer look</h3>
+                                    <a href="#" class="btn-main">View all</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 p-0">
+                            <div class="banners-item banners-item--2 lazy" data-bg="url(img/Mask_2.png)">
+                                <div class="banners-item__content">
+                                    <span class="label-sale">New</span>
+                                    <h3 class="banners-item__content__heading"><b>Men's collection</b><br>mid-season sale</h3>
+                                    <a href="#" class="btn-main">View all</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section> -->
             <section class="product-list">
                 <div class="container">
                     <header class="native-header">
@@ -543,7 +568,7 @@
 
        <script>
           
-             $("#test").validate({
+             $("#formLogin").validate({
                  
  ignore: ':hidden:not(:checkbox)',
      
@@ -562,21 +587,29 @@
         errorClass: "text-error",
                  rules: {
                
-                 tests: "required",
-                    email: {
+                 password: "required",
+                   checkbox: "required",
+                   firstname: "required",
+                   lastname: "required",
+               email: {
+                 required: true,
+                 email: true
+                 }
+               
+               },
+               messages: {
+               
+                 password: "Pole wymagane",
+               checkbox: "Pole wymagane",
+               firstname: "Pole wymagane",
+               lastname: "Pole wymagane",
+               email: {
                    required: "Nie podałeś adresu e-mail",
                    email: "Błędny format"
               
         
       
         },
-               
-               },
-               messages: {
-               
-                 tests: "Pole wymagane",
-                
-            
                  },
        
              });

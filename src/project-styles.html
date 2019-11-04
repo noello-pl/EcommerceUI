@@ -319,7 +319,7 @@
 
        <script>
           
-             $("#test").validate({
+             $("#formLogin").validate({
                  
  ignore: ':hidden:not(:checkbox)',
      
@@ -338,21 +338,29 @@
         errorClass: "text-error",
                  rules: {
                
-                 tests: "required",
-                    email: {
+                 password: "required",
+                   checkbox: "required",
+                   firstname: "required",
+                   lastname: "required",
+               email: {
+                 required: true,
+                 email: true
+                 }
+               
+               },
+               messages: {
+               
+                 password: "Pole wymagane",
+               checkbox: "Pole wymagane",
+               firstname: "Pole wymagane",
+               lastname: "Pole wymagane",
+               email: {
                    required: "Nie podałeś adresu e-mail",
                    email: "Błędny format"
               
         
       
         },
-               
-               },
-               messages: {
-               
-                 tests: "Pole wymagane",
-                
-            
                  },
        
              });

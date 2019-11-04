@@ -1,0 +1,81 @@
+.section-form {
+    margin-top: 30px;
+margin-bottom: 45px;
+@media (min-width: $lg){
+		margin-top: 45px;
+	}
+    &__content {
+        &__header {
+            text-align: center;
+            margin-bottom: 25px;
+
+            @media (min-width: $lg) {
+                margin-bottom: 35px;
+            }
+
+            .native-heading-small {
+                @media (min-width: $lg) {
+                    font-size: 2.2rem;
+                    line-height: 3.3rem;
+                }
+            }
+
+            p {
+                color: #7D7D7D;
+                font-size: 1.3rem;
+                line-height: 2.5rem;
+                margin-top: 15px;
+            }
+        }
+        .bottom-form{
+        	display: flex;
+        	flex-direction: flex-end;
+        	align-items: flex-start;
+        	margin-bottom: 15px;
+        	flex-direction: column;
+        	@media (min-width: $md){
+        		flex-direction: row;
+        			justify-content: space-between;
+
+        	}
+        	.text-link{
+        		color:#808080;
+        		font-size: 1.3rem;
+        		font-weight: 400;
+        		margin-top: 10px;
+        		@media (min-width: $md){
+        			margin-top: 0;
+        		}
+        		&:hover{
+        			color:$native-color-hover;
+        		}
+        	}
+        }
+        .registration-variant{
+        	text-align: center;margin-top: 20px;
+        	display: flex;
+        	flex-direction: column;
+
+        	align-items: center;
+        		@media (min-width: $sm){
+        			flex-direction: row;
+        			justify-content: center;
+        		}
+        	span{
+        		display: inline-flex;
+        		color:1.4rem;
+        		line-height: 2.1rem;
+        	}
+        	a{
+        		display: inline-flex;
+        		font-size: 1.4rem;
+        		line-height: 2.1rem;
+        		font-weight: 600;
+        		@media (min-width: $sm){margin-left: 25px;}
+        		&:hover{
+        			color:$native-color-hover;
+        		}
+        	}
+        }
+    }
+}

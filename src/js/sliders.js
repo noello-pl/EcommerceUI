@@ -8,7 +8,8 @@ var SliderDesktop = new Swiper('.section-entry-slider', {
         el: '.section-entry-slider .swiper-pagination',
        type: 'bullets',
       },
-  
+      pagination: '.section-entry-slider .swiper-pagination',
+  paginationClickable: true,
     breakpoints: {
 
               767: {
@@ -17,10 +18,9 @@ var SliderDesktop = new Swiper('.section-entry-slider', {
         },
       }
 ,
-      navigation: {
-        nextEl: '.section-entry-slider .swiper-button-next',
-        prevEl: '.section-entry-slider .swiper-button-prev',
-      },
+    
+      nextButton: '.section-entry-slider  .swiper-button-next',
+    prevButton: '.section-entry-slider  .swiper-button-prev',
    
     });
 
@@ -36,7 +36,8 @@ var SliderProduct = new Swiper('.slider-product', {
         el: '.slider-product .swiper-pagination',
        type: 'bullets',
       },
-  
+      pagination: '.slider-product  .swiper-pagination',
+  paginationClickable: true,
     breakpoints: {
    1200: {
       slidesPerView: 3,
@@ -54,58 +55,28 @@ var SliderProduct = new Swiper('.slider-product', {
         },
       }
 ,
-      navigation: {
-        nextEl: '.product-list .swiper-button-next',
-        prevEl: '.product-list .swiper-button-prev',
-      },
+    
+       nextButton: '.product-list .swiper-button-next',
+    prevButton: '.product-list .swiper-button-prev',
    
     });
 
- var pgalleryThumbsver = new Swiper('.thumbVertical', {
-      spaceBetween: 0,
-    //  slidesPerView: 3,
-     //freeMode: true,
-      clickable:true,
-       direction: 'vertical',
-        slideToClickedSlide: true,
-      //watchSlidesVisibility: true,
-    //  watchSlidesProgress: true,
-  //  spaceBetween: 10,
-  // loop: true, bug too
-  //centeredSlides: true,
-  slidesPerView: 6,
-  touchRatio: 1,
-  slideToClickedSlide: true,
-  simulateTouch:true,
-  breakpoints: {
-             991: {
-        direction: 'horizontal',
-          centeredSlides: false,
-          
-        }
-      }
-    });
-    var pgalleryTopver = new Swiper('.productGalleryLargeVer', {
-      spaceBetween: 0,
-       slidesPerView: 1,
-        freeMode: false,
-         scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false,
-      },
-     /* navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },*/
-      thumbs: {
-        swiper: pgalleryThumbsver
-      },
-        breakpoints: {
-             600: {
-          slidesPerView: 1,
-          
-          
-        }
-      }
 
-    });
+
+    $(document).ready(function() {
+  var productSlider = new Swiper('.productGalleryLargeVer', {
+   
+    spaceBetween: 10,
+    scrollbar:'.swiper-scrollbar',
+  });
+  var productThumbs = new Swiper('.thumbVertical', {
+    spaceBetween: 5,
+    centeredSlides: true,
+    slidesPerView: 4,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    direction: 'vertical'
+  });
+  productSlider.params.control = productThumbs;
+  productThumbs.params.control = productSlider;
+});

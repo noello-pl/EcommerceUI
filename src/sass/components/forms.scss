@@ -12,6 +12,9 @@ input,
     width: 100%;
     box-sizing: border-box;
      transition: 150ms border ease-in-out;
+     @media (min-width: $md){
+         padding: $input-padding-md;
+     }
 }
 
 textarea,
@@ -48,27 +51,35 @@ label {
      .text-error,
     .error-msg,
     .error {
-        left:40px;
+        left:20px;
         position: absolute;
         top:10px;
+         @media (min-width: $md){
+            left:40px;
+         }
     }
 }
 
 .label-slide {
     position: absolute;
-    left: 40px;
+    left: 20px;
     opacity:1;
    
     pointer-events: none;
     transition: 150ms top ease-in-out, 150ms font ease-in-out;
+    @media (min-width: $md){
+        left:40px;
+    }
 }
 
 .write-input {
     .label-slide {
         top: 10px;
         font-size: 1rem;
-        left: 42px;
-
+        left: 22px;
+   @media (min-width: $md){
+    left:42px;
+   }
         //text-transform: uppercase;
    
     }
@@ -179,9 +190,17 @@ input[type="radio"]{
 /* Chceckbox */
 
 .checkbox {
-    display: block;
+    display:flex;
     position: relative;
     margin: 15px 0;
+    flex-direction: column;
+
+    .text-error{
+        order:1;
+        position: absolute;
+        bottom:-18px;
+        left:34px;
+    }
 
     &__input {
         position: absolute;
@@ -360,7 +379,7 @@ color: $input-font-color;
         outline: none;
         padding: $input-padding;
         position: relative;
-
+  
         @media (min-width: $xl) {
             font-size: 1.4rem;
         }
@@ -427,16 +446,21 @@ select:-moz-focusring {
 }
 
 .select-wrapper.small-size{
-    width: auto;
+   width: auto;
     display: inline-flex;
     height: 44px;
     select{
-        width: auto;
+        width: 83px;
         min-width: auto;
         text-transform: uppercase;
         color:#000000;
         padding: 2px 37px 0 27px;
     }
+}
+.select-wrapper.small-size.small-size--lg{
+   select{
+     width: 126px;
+   }
 }
 .select-wrapper.small-size:after{
         right: 16px;
@@ -461,10 +485,13 @@ select:-moz-focusring {
 .quantity-item{
     display: flex;
     align-items: center;
-    width: 130px;
+    width: 120px;
     height: 49px;
     border:1px solid #D8D8D8;
     border-radius:50px;
+    @media (min-width: $xl){
+        width: 132px;
+    }
     &__btn{
         background: transparent;
         font-size: 1.5rem;
@@ -520,13 +547,21 @@ select:-moz-focusring {
 
 .item-color{
     display: inline-flex;
-    width: 43px;
-    height: 43px;
+    width: 35px;
+    height: 35px;
     background: #000;
     position: relative;
     border:10px solid #fff;
     margin-left: 8px;
     cursor:pointer;
+     @media (min-width: $xl) and (max-width: 1399px){
+        width: 35px;
+        height: 35px;
+    }
+      @media (min-width: 1399px){
+          width: 38px;
+    height: 38px;
+    }
 
 }
 .item-color:hover:after,
@@ -539,12 +574,20 @@ select:-moz-focusring {
 .item-color:after{
     content:"";
     border:1px solid #E6E6E6;
-    width: 43px;
-    height: 43px;
+    width: 35px;
+    height: 35px;
     position: absolute;
     left: -10px;
     top: -10px;
     transition:120ms border ease-in-out;
+    @media (min-width: $xl) and (max-width: 1399px){
+        width: 34px;
+        height: 34px;
+    }
+    @media (min-width: 1399px){
+          width: 38px;
+    height: 38px;
+    }
 }
 .item-color:first-of-type{
     margin-left: 0;
@@ -555,12 +598,19 @@ select:-moz-focusring {
     justify-content: center;
     align-items: center;
     border:1px solid #D4D4D4;
-    width: 43px;
-    height: 43px;
+    width: 35px;
+    height: 35px;
     cursor:pointer;
     background: #fff;
     transition:120ms background ease-in-out, 120ms color ease-in-out;
-   
+    @media (min-width: $xl) and (max-width: 1399px){
+        width: 34px;
+        height: 34px;
+    }
+      @media (min-width: 1399px){
+          width: 38px;
+    height: 38px;
+    }
     &__name{
  font-size: 1.3rem;
     font-weight: 400;
